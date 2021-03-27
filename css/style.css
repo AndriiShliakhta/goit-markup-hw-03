@@ -9,6 +9,7 @@
   --footer-mail-phone-color: rgba(255, 255, 255, 0.6);
   --portfolio-buttons-color: #f5f4fa;
   --hero-footer-bgc: #2f303a;
+  --card-border-color: #eeeeee;
 }
 body {
   font-family: 'Roboto', 'Arial', sans-serif;
@@ -51,7 +52,8 @@ ul {
 .services-section-items,
 .portfolio-buttons-item,
 .benefits-items,
-.team-section-list {
+.team-section-list,
+.portfolio-projects {
   list-style-type: none;
 }
 .section-title {
@@ -174,8 +176,12 @@ ul {
 .services-section-items:not(:first-child) {
   margin-left: 30px;
 }
-.services-section-items img {
+
+.services-section-items img,
+.portfolio-project-item img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* Работники компании */
 .team-section {
@@ -228,11 +234,16 @@ ul {
   display: block;
 }
 
-.portfolio-buttons .battons {
+.portfolio-buttons .buttons {
   color: var(--section-title-color);
   background-color: var(--portfolio-buttons-color);
   font-weight: 500;
   line-height: 1.62;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+.portfolio-buttons {
+  margin-bottom: 50px;
 }
 .buttons:hover,
 .buttons:focus {
@@ -241,13 +252,35 @@ ul {
   outline: none;
   filter: drop-shadow(0px 4px 4px var(--logos-buttons-shadow));
 }
-.portfolio-buttons {
-  text-align: center;
+
+.portfolio-buttons-item:not(:first-child) {
+  margin-left: 8px;
 }
 .portfolio-buttons,
-.portfolio-section .portfolio-projects {
+.portfolio-projects {
   display: flex;
   justify-content: center;
+}
+.portfolio-section .container {
+  margin: auto;
+}
+.portfolio-projects {
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.portfolio-project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.card-content {
+  padding: 20px 24px;
+  border-right: 1px solid var(--card-border-color);
+  border-bottom: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
 }
 .portfolio-projects .subtitle {
   font-weight: 700;
@@ -259,4 +292,5 @@ ul {
   color: var(--primery-text-color);
   font-size: 16px;
   line-height: 1.9;
+  margin-top: 4px;
 }
