@@ -94,16 +94,20 @@ ul {
 .nav-list {
   margin-left: 93px;
 }
-.nav-items:not(:first-child),
-.contacts-items:not(:first-child) {
+.nav-items,
+.contacts-items {
   margin-left: 50px;
 }
+.nav-items:first-child,
+.contacts-items:first-child {
+  margin-left: 0;
+}
+
 .logo {
   font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.17;
   font-weight: 700;
-  text-shadow: 0px 4px 4px var(--logos-buttons-shadow);
 }
 .header .logo {
   color: var(--header-logo-color);
@@ -150,7 +154,7 @@ ul {
   color: var(--white-color);
   background-color: var(--accent-color);
   width: 200px;
-  height: 50px;
+  padding: 10px 32px;
   border-radius: 4px;
   margin-top: 30px;
 }
@@ -159,8 +163,12 @@ ul {
 .benefits-section {
   padding-bottom: 0;
 }
-.benefits-items:not(:first-child) {
+.benefits-items {
+  flex-basis: 270px;
   margin-left: 30px;
+}
+.benefits-items:first-child {
+  margin-left: 0;
 }
 .benefits-section .subtitle {
   line-height: 1.14;
@@ -173,12 +181,15 @@ ul {
 .services-section-list {
   display: flex;
 }
-.services-section-items:not(:first-child) {
+.services-section-items {
   margin-left: 30px;
 }
-
+.services-section-items:first-child {
+  margin-left: 0;
+}
 .services-section-items img,
-.portfolio-project-item img {
+.portfolio-project-item img,
+.team-section-item img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -190,15 +201,18 @@ ul {
 .team-section-list {
   display: flex;
 }
-.team-section-item:not(:first-child) {
-  margin-left: 30px;
-}
 .team-section-item {
+  margin-left: 30px;
   font-size: 16px;
+  line-height: 1.17;
+
   text-align: center;
-  line-height: 1.9;
   background-color: var(--white-color);
 }
+.team-section-item:first-child {
+  margin-left: 0;
+}
+
 .team-section-item .subtitle {
   font-weight: 500;
   margin: 30px 0 10px;
@@ -215,15 +229,15 @@ ul {
 .footer .logo {
   color: var(--white-color);
   display: inline-block;
-  margin-bottom: 20px;
 }
 .footer address {
   font-style: normal;
+  font-weight: 400;
   color: var(--white-color);
+  margin-top: 20px;
+  line-height: 1.53;
 }
-.address-item {
-  margin-bottom: 9px;
-}
+
 .mail-phone {
   color: var(--footer-mail-phone-color);
   margin-top: 9px;
@@ -244,6 +258,7 @@ ul {
 }
 .portfolio-buttons {
   margin-bottom: 50px;
+  padding: 6px 22px;
 }
 .buttons:hover,
 .buttons:focus {
@@ -253,8 +268,11 @@ ul {
   filter: drop-shadow(0px 4px 4px var(--logos-buttons-shadow));
 }
 
-.portfolio-buttons-item:not(:first-child) {
+.portfolio-buttons-item {
   margin-left: 8px;
+}
+.portfolio-buttons-item:first-child {
+  margin-left: 0;
 }
 .portfolio-buttons,
 .portfolio-projects {
@@ -271,7 +289,6 @@ ul {
 }
 .portfolio-project-item {
   flex-basis: calc(100% / 3 - 30px);
-  margin-bottom: 30px;
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -283,7 +300,6 @@ ul {
   border-left: 1px solid var(--card-border-color);
 }
 .portfolio-projects .subtitle {
-  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
