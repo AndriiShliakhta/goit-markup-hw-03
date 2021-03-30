@@ -15,7 +15,7 @@ body {
   font-family: 'Roboto', 'Arial', sans-serif;
   color: var(--primery-text-color);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 h1,
@@ -157,6 +157,7 @@ ul {
   padding: 10px 32px;
   border-radius: 4px;
   margin-top: 30px;
+  line-height: 1.875;
 }
 
 /* Преимущиства */
@@ -171,10 +172,15 @@ ul {
   margin-left: 0;
 }
 .benefits-section .subtitle {
-  line-height: 1.14;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 10px;
+}
+.benefits-items p {
+  font-weight: 400;
 }
 
 /* Услуги компании */
